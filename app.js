@@ -28,7 +28,7 @@ var _ = require("lodash");
 
 const homeStartingContent =
   "This is Daily Journal webpage. Here You can write anything or share latest news about various events Happening in the country. It's Like a Notice Board where you can post anything";
-const aboutContent ="Welcome to Daily Journal, your go-to destination for staying informed, engaged, and inspired. At Daily Journal, we believe in the power of knowledge to connect people, spark conversations, and drive positive change. Our platform is more than just a website—it's a vibrant community where individuals from all walks of life come together to share, discover, and explore the world around them."
+const aboutContent ="Welcome to Daily Journal, your go-to destination for staying informed, engaged, and inspired. At Daily Journal, we believe in the power of knowledge to connect people, spark conversations, and drive positive change. Our platform is more than just a website—it's a vibrant community where individuals from all walks of life come together to share, discover, and explore the world around them.";
 const contactContent =
   "Scelerisque eleifend donec pretium vulputate sapien. Rhoncus urna neque viverra justo nec ultrices. Arcu dui vivamus arcu felis bibendum. Consectetur adipiscing elit duis tristique. Risus viverra adipiscing at in tellus integer feugiat. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Consequat interdum varius sit amet mattis. Iaculis nunc sed augue lacus. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Pulvinar elementum integer enim neque. Ultrices gravida dictum fusce ut placerat orci nulla. Mauris in aliquam sem fringilla ut morbi tincidunt. Tortor posuere ac ut consequat semper viverra nam libero.";
 
