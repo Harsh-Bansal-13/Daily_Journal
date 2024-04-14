@@ -1,14 +1,23 @@
 //jshint esversion:6
-
+const temp = require("dotenv").config();
+const port = process.env.PORT || 4000;
+const url = process.env.URL_MONGODB;
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 
 const mongoose = require("mongoose");
 
-mongoose.connect(
-  "mongodb+srv://harshbansal1717:F2ycUN7j0UoCctob@blogdb.cq1ipsk.mongodb.net/?retryWrites=true&w=majority"
-);
+mongoose
+  .connect(url)
+  .then(() => {
+    console.log("Connected to MongoDB Atlas database");
+  })
+  .catch((err) => {
+    console.log(url);
+    console.log("MongoDB Atlas server not connected");
+    console.error(err);
+  });
 
 const postSchema = new mongoose.Schema({
   title: String,
@@ -72,6 +81,6 @@ app.post("/compose", function (req, res) {
   res.redirect("/");
 });
 
-app.listen(3000, function () {
+app.listen(port, function () {
   console.log("Server started on port 3000");
 });
