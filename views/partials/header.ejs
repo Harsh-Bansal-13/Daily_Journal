@@ -1,26 +1,84 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Journal</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <title>Daily Journal</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/styles.css">
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <p class="navbar-brand">DAILY JOURNAL</p>
+    <style>
+      /* Custom CSS for the navbar */
+      .navbar-brand {
+        font-weight: bold;
+        font-size: 24px;
+        color: #fff; /* Navbar brand color */
+      }
+
+      .navbar-nav .nav-link {
+        font-size: 18px;
+        color: #fff; /* Navbar link color */
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: #ffc107; /* Navbar link hover color */
+      }
+
+      .navbar {
+        background-color: #343a40; /* Navbar background color */
+      }
+
+      /* Adjustments for the toggle button on smaller screens */
+      .navbar-toggler {
+        border-color: #ffc107; /* Toggle button color */
+      }
+
+      .navbar-toggler-icon {
+        /* background-color: #ffc107; Toggle button icon color */
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">DAILY JOURNAL</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">CONTACT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/compose">CREATE</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <ul class="nav navbar-nav navbar-right">
-        <!-- 6 -->
-        <li id="home"><a href="/">HOME</a></li>
-        <li id="about"><a href="/about">ABOUT US</a></li>
-        <li id="contact"><a href="/contact">CONTACT US</a></li>
-        <li id="contact"><a href="/compose">CREATE</a></li>
-      </ul>
-    </div>
-  </nav>
+    </nav>
 
-<body>
-  <div class="container">
+    <!-- Your content goes here -->
+
+    <!-- Bootstrap JS and jQuery (Optional, if you need dropdowns or other interactive components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -67,9 +67,29 @@ app.get("/posts/:postID", function (req, res) {
     res.render("post", {
       title: data.title,
       content: data.content,
+      _id: data._id, // Pass _id to the template
     });
   });
 });
+app.post("/delete/:postId", function (req, res) {
+  const postId = req.params.postId;
+
+  Post.findByIdAndRemove(postId)
+    .then((deletedPost) => {
+      if (deletedPost) {
+        console.log("Successfully deleted the post with ID:", postId);
+        res.redirect("/");
+      } else {
+        console.log("Post not found with ID:", postId);
+        res.sendStatus(404); // Not Found
+      }
+    })
+    .catch((err) => {
+      console.log("Error deleting the post:", err);
+      res.sendStatus(500); // Internal Server Error
+    });
+});
+
 app.post("/compose", function (req, res) {
   const post = new Post({
     title: req.body.postTitle,

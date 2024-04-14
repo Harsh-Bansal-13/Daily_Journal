@@ -1,10 +1,37 @@
 <%- include("partials/header"); -%>
+<style>
+  /* Custom CSS for the Post page */
+  .container {
+    padding: 20px;
+  }
 
-    <h1>
-        <%=title%>
-    </h1>
-    <p>
-        <%=content%>
-    </p>
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
 
-    <%- include("partials/footer"); -%>
+  p {
+    font-size: 18px;
+  }
+
+  .helper {
+    background-color: rgb(249, 40, 40);
+    border-color: rgb(249, 40, 40);
+    color: white;
+  }
+
+  .helper:hover {
+    background-color: rgb(179, 13, 13);
+    border-color: rgb(179, 13, 13);
+    color: white;
+  }
+</style>
+<div class="container mt-4">
+  <h1><%= title %></h1>
+  <p><%= content %></p>
+  <form action="/delete/<%= _id %>" method="post">
+    <button class="btn helper" type="submit" name="button">Delete</button>
+  </form>
+</div>
+
+<%- include("partials/footer"); -%>

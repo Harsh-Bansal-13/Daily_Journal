@@ -1,4 +1,4 @@
-.container-fluid {
+/* .container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
 }
@@ -13,9 +13,9 @@
 }
 .navbar-nav  li a:hover {
     color: #1abc9c !important;
-}
+} */
 
-.footer-padding {
+/* .footer-padding {
 	padding-bottom: 60px;
 }
 
@@ -32,4 +32,24 @@
 	margin-top: 25px;
 	font-size: 12px;
   color: #fff;
-}
+} */
+
+/* Custom CSS for the footer */
+.footer {
+    background-color: #343a40; /* Footer background color */
+    color: #fff; /* Footer text color */
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  .footer-padding {
+    height: 20px; /* Footer padding height */
+    background-color: #343a40; /* Background color same as footer */
+  }
+  

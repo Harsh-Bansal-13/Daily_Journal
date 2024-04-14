@@ -1,22 +1,50 @@
-<%- include("partials/header"); -%>
-    <h1>Home</h1>
-    <p>
-        <%= startingContent %>
-    </p>
+<%- include("partials/header"); %>
+<style>
+  /* Custom CSS for the home page */
+  .container {
+    padding: 20px;
+  }
 
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 
-    <% posts.forEach(function(post){ %>
+  .card-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
 
-        <h1>
-            <%=post.title%>
-        </h1>
-        <p>
-            <%=post.content.substring(0, 100) + " ..." %>
-                <a href="/posts/<%=post._id%>">Read More</a>
-        </p>
+  .card-text {
+    font-size: 18px;
+  }
 
+  .helper {
+    background-color: #343a40;
+    border-color: #343a40;
+    color: white;
+  }
 
-        <% }) %>
+  .helper:hover {
+    background-color: black;
+    border-color: black;
+    color: #fff;
+  }
+</style>
+<div class="container mt-4">
+  <h1>Home</h1>
+  <p class="lead"><%= startingContent %></p>
 
+  <% posts.forEach(function(post){ %>
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title"><%= post.title %></h2>
+      <p class="card-text"><%= post.content.substring(0, 100) + " ..." %></p>
+      <a href="/posts/<%= post._id %>" class="btn helper">Read More</a>
+    </div>
+  </div>
+  <% }) %>
+</div>
 
-            <%- include("partials/footer"); -%>
+<%- include("partials/footer"); %>
